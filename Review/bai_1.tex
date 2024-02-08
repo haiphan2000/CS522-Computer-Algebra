@@ -1,0 +1,37 @@
+\section*{Bài 1.}
+
+Chứng minh rằng: Nếu đa thức bậc hai $P(x)$ nhận giá trị nguyên tại ba giá trị  nguyên liên tiếp của biến $x$ thì đa thức đó sẽ nhận giá trị nguyên tại mọi $x$ nguyên.
+
+\begin{center}
+    \textbf{\underline{Bài làm:}}
+\end{center}
+
+\addcontentsline{toc}{section}{Bài 1}
+
+Gọi $P(x) = ax^2 + bx + c$. Giả sử x nhận ba giá trị nguyên liên tiếp là $-1$, $0$, $1$.
+
+Ta có:
+\begin{itemize}
+    \item $P(0) = c$. Theo giả thiết thì $P(0) \in \mathbb{Z} \rightarrow c \in \mathbb{Z}$.
+    \item $P(1) = a + b + c$. Vì $P(1)$, $c \in \mathbb{Z} \rightarrow a + b \in \mathbb{Z}$.
+    \item $P(1) = a - b + c$. Vì $P(-1)$, $c \in \mathbb{Z} \rightarrow a - b \in \mathbb{Z}$.
+\end{itemize}
+
+Suy ra, $2a = (a + b) + (a - b) \in \mathbb{Z}$.
+
+Gọi $n$ là một số nguyên bất kỳ. Ta có:
+
+\begin{align*}
+    P(n) &= an^2 + bn + c \\
+    &= an^2 + bn + c + an - an \\
+    &= a(n^2 - n) + (a + b)n + c \\
+    &= 2a \big[ \frac{n(n-1)}{2} \big] + (a + b)n + c
+\end{align*}
+
+Vì $n$ là số nguyên nên $\displaystyle \frac{n(n-1)}{2} = \frac{\text{số chẵn}}{2}$ cũng là một số nguyên.
+
+Ta cũng đã chứng minh được $2a$, $a + b$, $c$ là các số nguyên.
+
+Khi đó, $P(n)$ sẽ nhận giá trị nguyên với mọi số nguyên $n$ (ĐPCM).
+
+\clearpage

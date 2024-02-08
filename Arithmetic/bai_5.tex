@@ -1,0 +1,77 @@
+\section*{Bài 5}
+
+\begin{enumerate}[label=(\alph*)]
+\item Giải phương trình nghiệm nguyên: $a^2 + b^2 = c^2$.
+\item Chứng minh rằng phương trình sau không có nghiệm nguyên: $a^4 + b^4 = c^4$.
+\end{enumerate}
+	
+\addcontentsline{toc}{section}{Bài 5}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+(a)
+
+Ta giả sử $a, b, c$ nguyên tố cùng nhau và khi đó, chúng đôi một nguyên tố cùng nhau.
+
+Ta nhận thấy rằng $a$ và $b$ không thể đồng thời là số chẵn (vì $a$ và $b$ nguyên tố cùng nhau như đã nói ở trên). Ngoài ra, $a$ và $b$ cũng không thể đồng thời là số lẻ (vì nếu $a$ và $b$ là số lẻ thì ta biểu diễn $a = 2k + 1, b = 2l + 1 \rightarrow a^2 + b^2 = \big( 2k + 1 \big)^2 + \big( 2l + 1 \big)^2 = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 = 4 \big( k^2 + k + l^2 + l \big) + 2$ chia 4 dư 2 nhưng $c^2$ thì lại chia hết cho 4).
+
+Ta giả sử $a$ lẻ và $b$ chẵn (Trường hợp ngược lại là $a$ chẵn và $b$ lẻ thì ta cũng sẽ xét tương tự). Ta có: $$a^2 = c^2 - b^2 = \big( c + b \big) \big( c - b \big)$$
+Ta thấy $c + b$ và $c - b$ là các số lẻ và chúng nguyên tố cùng nhau. Hai số nguyên dương $c + b$ và $c - b$ nguyên tố cùng nhau và có tích là số chính phương $a^2$ nên mỗi số $c + b$ và $c - b$ cũng là số chính phương.
+
+Ta đặt $c + b = m^2, c - b = n^2$, với $m, n$ là các số lẻ và nguyên tố cùng nhau, $m > n$. Ta được:
+$$ \begin{cases}
+        a = mn\\
+        b = \displaystyle \frac{m^2 - n^2}{2}\\
+        c = \displaystyle \frac{m^2 + n^2}{2}
+\end{cases} $$
+Vì $m, n$ là các số lẻ nên $m^2 - n^2$ và $m^2 + n^2$ là các số chẵn. Do đó $b$ và $c$ ra kết quả là số nguyên.
+
+Ta thử thay bộ 3 số $\big( a, b, c \big)$ vào vế trái của phương trình $a^2 + b^2 = c^2$. Ta được:
+\begin{align*}
+    a^2 + b^2 &= \big( mn \big)^2 + \left( \frac{m^2 - n^2}{2} \right)^2 = \frac{ \big( m^2 - n^2 \big)^2 + 4m^{2}n^{2}}{2^2}\\
+              &= \frac{ \big( m^2 \big)^2 + 2m^{2}n^{2} + \big( n^2 \big)^2}{2^2} = \left( \frac{m^2 + n^2}{2} \right)^2 = c^2
+\end{align*}
+
+Vậy với bộ 3 số $\big( a, b, c \big)$ ở trên thì ta chứng minh được phương trình $a^2 + b^2 = c^2$ có nghiệm nguyên.
+
+
+(b)
+
+Đầu tiên, phương trình $a^4 + b^4 = c^4$ (1) có nghiệm tầm thường khi $a = 0$ hoặc $b = 0$, tương ứng với từng trường hợp thì $c =\pm b$ hoặc $c = \pm a$. Nói cách khác, (1) có các nghiệm tầm thường tổng quát là $(0, b, b)$, $(0, b, -b)$, $(a, 0, a)$, $(a, 0, -a)$. Ta cần chứng minh phương trình (1) không có nghiệm nguyên nào khác ngoài các nghiệm tầm thường này.
+
+Ta có thể chứng minh phương trình (1) không có nghiệm nguyên thông qua việc chứng minh phương trình $a^4 + b^4 = c^2$ (2) không có nghiệm nguyên. Điều này hợp lý vì nếu tồn tại một nghiệm $(a, b, c)$ của phương trình (2) thì có thể dẫn đến một nghiệm $(a, b, c^2)$ cho phương trình (1).
+
+Để chứng minh phương trình $a^4 + b^4 = c^2$ không có nghiệm nguyên, ta sử dụng \textbf{phương pháp lùi vô hạn}. Đây là phương pháp chứng minh bằng phản chứng, bằng cách chứng minh rằng giả sử tồn tại một bộ nghiệm nhỏ nhất, có thể tìm được bộ nghiệm nhỏ hơn. Điều này dẫn đến việc lùi vô hạn và cuối cùng là sự mâu thuẫn.
+
+Giả sử (2) có bộ nghiệm nhỏ nhất $(x, y, z)$, sao cho $x^4 + y^4 = z^2$ và $\gcd (x, y, z) = 1$. Khi đó $x$ hoặc $y$ sẽ là số chẵn, giả sử $x$ chẵn, $y$ lẻ (trong trường hợp $x$ lẻ và $y$ chẵn thì cũng xét tương tự, và tính tổng quát vẫn được bảo toàn).
+
+Dễ thấy, $(x^2, y^2, z)$ là một bộ ba số Pytago. Như đã biết, theo công thức tổng quát của bộ ba số Pytago, thì tồn tại hai số nguyên dương $m$ và $n$, với $m > n$, $\gcd (m, n) = 1$, sao cho:
+$$ \begin{cases}
+        x^2 = m^2 - n^2 \text{ (3)}\\
+        y^2 = 2mn \text{ (4)}\\
+        z = m^2 + n^2 \text{ (5)}
+\end{cases} $$
+Từ $x^2 = m^2 - n^2$ ta suy ra được $x^2 + n^2 = m^2$. Tương tự, $(x, n, m)$ là một bộ ba số Pytago, với $x$ chẵn và $n$ lẻ. Do đó, tồn tại hai số nguyên dương $p$ và $q$, với $p > q$, $\gcd (p, q) = 1$, sao cho:
+$$ \begin{cases}
+        x = p^2 - q^2 \text{ (6)}\\
+        n = 2pq \text{ (7)}\\
+        m = p^2 + q^2 \text{ (8)}
+\end{cases} $$
+Thay (7) và (8) vào (4) ta được: $y^2 = 4pq(p^2 + q^2)$ (9).
+
+Tuy nhiên, vì $p$, $q$ nguyên tố cùng nhau, suy ra $\gcd (p^2, q^2) = 1$, dẫn đến các số $p$, $q$, $p^2 + q^2$ sẽ nguyên tố cùng nhau từng đôi một. Hay nói cách khác, $(p, q) = 1$, $(p, (p^2 + q^2)) = 1$, $(q, (p^2 + q^2)) = 1$. Kết hợp với (9), ta có thể suy ra $p, q, (p^2 + q^2)$ đều là các số chính phương.
+
+Khi đó, tồn tại các số nguyên $r, s, t$ sao cho:
+$$ \begin{cases}
+        p = r^2\\
+        q = s^2\\
+        p^2 + q^2 = t^2
+\end{cases} $$
+Ta có $t^2 = p^2 + q^2 \Rightarrow t^2 = r^4 + s^4$.
+
+Có thể thấy $0 < t \leq m \leq m^2 + n^2 = z$, do đó ta có thêm một bộ nghiệm $(r, s, t)$, với $r, s, t$ nguyên tố cùng nhau từng đôi một, và $r, s, t$ nhỏ hơn $x, y, z$. Tuy nhiên, điều này ngược lại với giả thiết ban đầu là $(x, y, z)$ là bộ nghiệm nhỏ nhất. Vì vậy, (2) không có nghiệm nguyên ngoài nghiệm tầm thường và điều này dẫn đến (1) cũng không có nghiệm nguyên khác ngoài nghiệm tầm thường.
+
+Như vậy, với việc chứng minh phản chứng bằng phương pháp lùi vô hạn, ta đã chứng minh được phương trình $a^4 + b^4 = c^4$ không có nghiệm nguyên.
+\clearpage

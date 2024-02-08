@@ -1,0 +1,114 @@
+\documentclass[12pt, a4paper, fleqn]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cases}
+\usepackage{tabularx}
+
+\usepackage{scrextend}
+\changefontsizes{13pt}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\mathindent}{0pt}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total = {160mm, 247mm},
+	left = 25mm,
+	top = 25mm,
+}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength\cftaftertoctitleskip{30pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+\setlength{\intextsep}{6pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{CS522.M11}
+\fancyhead[L]{\textit{Bài tập buổi 2. Số học}}
+\fancyfoot[C]{\thepage}
+
+\usepackage{enumitem}
+
+\usepackage{import}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\newcommand{\Mod}[1]{\ \big( \mathrm{mod}\ #1 \big)}
+
+\usepackage{setspace}
+\setstretch{1.5}
+
+\usepackage[linesnumbered,ruled,vlined,commentsnumbered]{algorithm2e}
+\usepackage{xcolor}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetAlgoSkip{}
+
+\usepackage{etoolbox}
+\newcommand{\zerodisplayskips}{
+    \setlength{\abovedisplayskip}{3pt}
+    \setlength{\belowdisplayskip}{3pt}
+    \setlength{\abovedisplayshortskip}{3pt}
+    \setlength{\belowdisplayshortskip}{3pt}}
+\appto{\normalsize}{\zerodisplayskips}
+
+\usepackage{nccmath}
+
+\usepackage{multicol}
+
+\let\oldforall\forall
+\renewcommand{\forall}{\oldforall \, }
+
+\let\oldexist\exists
+\renewcommand{\exists}{\oldexist \: }
+
+\usepackage{ragged2e}
+
+\usepackage{textcomp}
+
+\usepackage{tkz-tab}
+ 
+\begin{document}
+	
+	\thispagestyle{empty}
+	
+	\import{./}{trang_bia.tex}
+
+	%Làm trang mục lục	
+	\begin{center}
+	    \tableofcontents
+	\end{center}
+	\clearpage
+	
+	\pagenumbering{arabic} 
+	
+    \import{./}{bai_1.tex}
+	
+	\import{./}{bai_2.tex}
+	
+	\import{./}{bai_3.tex}
+	
+	\import{./}{bai_4.tex}
+	
+	\import{./}{bai_5.tex}
+
+\end{document}

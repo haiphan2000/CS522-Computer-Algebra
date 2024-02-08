@@ -1,0 +1,30 @@
+\section*{Bài 2.}
+
+Cho đa thức bậc hai $f(x) = ax^2 + bx + c$ thỏa điều kiện: 
+$$|f(x)| \leq 1 \text{ khi } |x| \leq 1$$ 
+Chứng minh rằng: Với mọi $M \geq 1$, ta có: $|f(x)| \leq 2M^2 - 1$ khi $|x| < M$
+
+
+\begin{center}
+    \textbf{\underline{Bài làm:}}
+\end{center}
+
+Áp dụng công thức Langrange tại các điểm $x = -1, x = 0, x = 1$, ta được:
+$$\displaystyle f \big( x \big) = f \big( 1 \big) \cftdot \frac{x^2 + x}{2} - f \big( 0 \big) \cftdot \big( x^2 - 1 \big) + f \big( -1 \big) \cftdot \frac{x^2 - x}{2}$$
+
+Mà ta có:
+\begin{center}
+\begin{align*}
+\displaystyle \left| f \big( x \big) \right| &\leq \big| f \left( 1 \right) \big| \cftdot \left| \frac{x^2 + x}{2} \right| + \Big| f \big( 0 \big) \Big| \cftdot \left| x^2 - 1 \right| + \Big| f \big( -1 \big) \Big| \cftdot \left| \frac{x^2 - x}{2} \right| \\ &\leq \left| \frac{x^2 + x}{2} \right| + \left| \frac{x^2 - x}{2} \right| + \Big| x^2 - 1 \Big|
+\end{align*}
+\end{center}
+
+Nếu $\big| x \big| \leq 1$ thì ta được $\Big| f \big( x \big) \Big| \leq 1 \leq 2M^2 - 1, \forall M \geq 1$.
+
+Nếu $\big| x \big| > 1$ thì ta được $\displaystyle \frac{x^2 + x}{2} \cftdot \frac{x^2 - x}{2} = \frac{x^2 \left( x^2 - 1 \right)}{4} > 0$ suy ra  $\Big| f \big( x \big) \Big| \leq 2x^2 - 1 \leq 2M^2 - 1$.
+
+Tóm lại, ta kết luận rằng  $|f(x)| \leq 2M^2 - 1, \forall \big| x \big| < M$.
+	
+\addcontentsline{toc}{section}{Bài 2}
+
+\clearpage

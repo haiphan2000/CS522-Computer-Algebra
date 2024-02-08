@@ -1,0 +1,45 @@
+\section*{Bài 1.}
+
+Cho $\big( G, \cdot \big)$ là một nửa nhóm khác rỗng. Chứng minh các mệnh đề sau tương đương:
+\begin{enumerate}[label=(\roman*)]
+    \item $\big( G, \cdot \big)$ là một nhóm.
+    \item $\forall a, b \in G$, các phương trình $ax = b$ và $ya = b$ đều có nghiệm trong $G$.
+    \item Trong $G$ có phần tử đơn vị trái $e$ và:
+    $$\forall x \in G, \exists x' \in G \text{ sao cho } x'x = e$$
+    \item Trong $G$ có phần tử đơn vị phải $e'$ và:
+    $$\forall x \in G, \exists x'' \in G \text{ sao cho } x.x'' = e'$$
+\end{enumerate}
+	
+\addcontentsline{toc}{section}{Bài 1}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+\textbf{1.1.} Chứng minh (i) $\Rightarrow$ (ii)\\
+Dễ dàng, ta thấy $x = a^{-1}b$ là nghiệm của phương trình $ax = b$. Ta cũng có thể chứng minh đây là nghiệm duy nhất. Giả sử, $c \in G$ cũng là nghiệm của phương trình trên thì ta có: $a^{-1}(ac) = a^{-1}b$ hay $c = a^{-1}b = x$.\\
+Chứng minh tương tự, ta cũng có $y = a^{-1}b$ là nghiệm của phương trình $ax = b$.
+
+\textbf{1.2.} Chứng minh (ii) $\Rightarrow$ (iii)\\
+Do $\big( G, \cdot \big)$ khác rỗng nên tồn tại $a \in G$. Theo (ii) thì $ax = a$ có nghiệm trong $G$. Gọi $e \in G$ là nghiệm của phương trình $ax = a$. Cho $b \in G$. Gọi $c$ là nghiệm của phương trình $ax = b$. Ta có:
+$$eb = e(ac) = (ea)c = ac = b.$$
+Do đó, $e$ là phần tử đơn vị trái của $G$. Với mỗi $a \in G$, nghiệm của phương trình $ya = e$ là nghịch đảo trái của $a$.
+
+\textbf{1.3.} Chứng minh (iii) $\Rightarrow$ (iv)\\
+Cho $a \in G$. Gọi $a'$ là nghịch đảo trái trái của $a$ và $a''$ là nghịch đảo trái của $a'$. Ta có:
+$$aa' = e(aa') = (a''a')(aa') = a''(a'a)a' = a''ea' = a''a' = e.$$
+Khi đó, $a'$ là nghịch đảo phải của $a$.\\
+Ta lại có: $ae = a(a'a) = (aa')a = ea = a, \forall a \in G$.\\
+Vì thế, $e$ là phần tử đơn vị phải của $G$
+
+\textbf{1.4.} Chứng minh (iv) $\Rightarrow$ (i)\\
+Từ (iv), ta có: $e'$ là phần tử đơn vị phải và $xx'' = e$, $\forall x \in G$, $\exists x'' \in G$\\
+Ta cần chứng minh $e'$ cũng là phần tử đơn vị trái.\\
+Đặt $x' \in G$ sao cho $x''x' = e'$:
+$$x''x = (x''x)e' = (x''x)(x''x') = x''(xx'')x' = x''ex' = x''x' = e'$$
+Ta lại có:\\
+$e'x = (xx'')x = x(x''x) = xe' = x$ $\Rightarrow$ $e'$ là phần tử đơn vị trái của $G$.\\
+Khi đó, ta có: $\forall x \in G, \exists x' \in G \text{ sao cho } x'x = xx' = e$.\\
+Do đó, $\big( G, \cdot \big)$ là một nhóm.\\
+Từ \textbf{1.1, 1.2, 1.3} và \textbf{1.4}, ta đã chứng mình được 4 mệnh đề trên tương đương.
+\clearpage

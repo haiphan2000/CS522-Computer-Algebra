@@ -1,0 +1,53 @@
+\section*{Bài 1.}
+
+Chứng minh rằng tập hợp $A$ các ma trận có dạng:\\[6pt]
+$A = \left\{ \begin{bmatrix}
+a & b\\[-6pt]
+-b & a
+\end{bmatrix}: a, b \in \mathbb{R} \right\}$
+Là trường với hai phép toán cộng và nhân ma trận.
+
+\addcontentsline{toc}{section}{Bài 1}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+Ta dễ dàng nhận thấy tập hợp $A$ có nhiều hơn 1 phần tử.\\
+Ta xét:\\
+\textbf{1. Phép cộng trên $A$}
+\begin{itemize}[itemsep=-6pt, noitemsep,topsep=0pt]
+    \item $A$ có tính chất giao hoán. (vì $A$ là ma trận)
+    \item $A$ có tính chất kết hợp. (vì $A$ là ma trận)
+    \item Tồn tại một phần tử đơn vị là $O_2 = \begin{bmatrix}
+    0 & 0\\[-6pt]
+    0 & 0\end{bmatrix} \in A$.
+    \item Tồn tại một phần tử nghịch đảo là ma trận $-A = \begin{bmatrix}
+-a & -b\\[-6pt]
+b & -a
+\end{bmatrix} \in A$.
+\end{itemize}
+\textbf{2. Phép nhân trên $A$}
+\begin{itemize}[itemsep=-6pt, noitemsep, topsep=0pt]
+    \item $A$ có tính chất giao hoán. Thật vậy, $\forall A_1, A_2 \in A$, ta có:\\[6pt]
+    $A_1 A_2 = \begin{bmatrix}
+    a_1 & b_1\\[-6pt]
+    -b_1 & a_1
+    \end{bmatrix} \begin{bmatrix}
+    a_2 & b_2\\[-6pt]
+    -b_2 & a_2\end{bmatrix} = \begin{bmatrix}
+    a_1 a_2 - b_1 b_2 & a_2 b_1 + a_1 b_2\\[-6pt]
+    - a_2 b_1 - a_1 a_1 & a_1 a_2 - b_1 b_2
+    \end{bmatrix} = A_2 A_1 \in A$.\\[-12pt]
+    \item $A$ có tính chất kết hợp. (vì $A$ là ma trận)\\[-12pt]
+    \item Tồn tại một phần tử đơn vị là $I_2 = \begin{bmatrix} 
+    1 & 0\\[-6pt]
+    0 & 1\end{bmatrix} \in A$.
+    \item Tồn tại một phần tử nghịch đảo là ma trận $A^{-1} = \begin{bmatrix}
+\displaystyle \frac{a}{a^2 + b^2} & \displaystyle \frac{-b}{a^2 + b^2}\\[9pt]
+\displaystyle \frac{b}{a^2 + b^2} & \displaystyle \frac{a}{a^2 + b^2} \end{bmatrix} \in A \setminus \{0\}$.
+\end{itemize}
+\textbf{3.} $A$ cũng có tính chất phân phối. (vì $A$ là ma trận)\\
+Suy ra tập hợp $A$ là một trường với hai phép toán cộng và nhân ma trận (đpcm).
+
+\clearpage

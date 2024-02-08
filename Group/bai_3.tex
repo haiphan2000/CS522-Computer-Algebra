@@ -1,0 +1,49 @@
+\section*{Bài 3.}
+
+Chứng minh $\big( G, \cdot \big)$ là nhóm với:
+\begin{enumerate}[label=\alph*.]
+    \item $G = \mathbb{Z}$: tập các số nguyên.\\
+    $\cdot$ là phép toán cộng thông thường trên tập số nguyên.
+
+    \item Cho $p$ là một số nguyên tố.\\
+    $G = \big\{ 1, 2, \dotso, p - 1 \big\}$.\\
+    $\cdot$ là phép toán nhân trên số nguyên theo modulo $p$.
+
+    \item $G = \big\{ A \mid A \in M^3 \big( \mathbb{R} \big), \text{det} \big( A \big) \neq 0 \big\}$ với $M^3 \big( \mathbb{R} \big)$ là tập hợp các ma trận vuông số thực bậc 3.\\
+    $\cdot$ là phép nhân trên ma trận.
+\end{enumerate}
+	
+\addcontentsline{toc}{section}{Bài 3}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+\begin{enumerate}[label=\alph*.]
+    \item Hiển nhiên, ta có $G \neq \varnothing$.\\
+    Phép toán cộng trên $G$ có tính chất kết hợp (vì phép cộng trên tập số nguyên cũng có tính chất kết hợp).\\
+    Tồn tại một phần tử đơn vị là phần tử $0 \in G$ sao cho $\forall x \in G$ thì $x + 0 = 0 + x = x$.\\
+    Tồn tại một phần tử khả nghịch $-x \in G$ của phần tử $x \in G$ sao cho $x + (-x) = -x + x = 0$.\\
+    Như vậy, $\big( G, \cdot \big)$ là nhóm. (đpcm)
+
+    \item Hiển nhiên, ta có $G \neq \varnothing$.\\
+    Phép nhân trên số nghuyên theo modulo $p$ có tính chất kết hợp. Thật vậy, $\forall a_1, a_2, a_3 \in G, a_1 \equiv b_1 \Mod{p}, a_2 \equiv b_2 \Mod{p}, a_3 \equiv b_3 \Mod{p}$ thì ta có:
+    $$(a_1 \cdot a_2) \cdot a_3 \equiv (b_1 \cdot b_2) \cdot b_3 \Mod{p} \equiv b_1 \cdot (b_2 \cdot b_3) \Mod{p} \equiv a_1 \cdot (a_2 \cdot a_3).$$
+    Tồn tại một phần tử đơn vị là phần tử $1 \in G, 1 \equiv 1 \Mod{p}$ sao cho $\forall a \in G, a \equiv b \Mod{p}, a \cdot 1 = 1 \cdot a = a$. Thật vậy:
+    $$a \cdot 1 \equiv (b \cdot 1) \Mod{p} \equiv b \Mod{p} \equiv a.$$
+    $$1 \cdot a \equiv (1 \cdot b) \Mod{p} \equiv b \Mod{p} \equiv a.$$
+    Tồn tại một phần tử khả nghịch $r \in G$ của phần tử $a \in G$. Thật vậy:\\
+    Khi đó: gcd$(a, p) = 1$. Suy ra, tồn tại một cặp $(r, s)$ sao cho $ar + ps = 1$. Vì $p$ là số nguyên tố nên $a r \Mod{p} \equiv 1.$\\
+    Như vậy, $\big( G, \cdot \big)$ là nhóm. (đpcm)
+
+    \item Hiển nhiên, ta có $G \neq \varnothing$.\\
+    Phép nhân giữa 2 ma trận vuông có tính kết hợp.\\
+    $\forall A \in G$, tồn tại một phần tử đơn vị là phần tử $I_{3,3} \in G$ sao cho $A \cdot I_{3,3} = I_{3,3} \cdot A = A$.\\
+    $\forall A \in G \setminus \{0\}$, det$(A) \neq 0$ nên $A$ là ma trận khả nghịch. Khi đó, ta luôn tìm được ma trận $A^{-1}$ sao cho $A \cdot A^{-1} = A^{-1} \cdot A = I_{3,3}$.\\
+    Như vậy, $\big( G, \cdot \big)$ là nhóm. (đpcm)
+    
+\end{enumerate}
+
+
+	
+\clearpage

@@ -1,0 +1,49 @@
+\section*{Bài 2.}
+
+
+Dễ thấy rằng: $\displaystyle \lim_{n \to \infty} \frac{\log n}{n^\alpha} = 0, \forall \alpha > 0$.\\
+Nghĩa là: $\forall \alpha > 0, \exists N_\alpha > 0$ sao cho: $\log n < n^\alpha, \forall n > N_\alpha$.\\
+Cho $\alpha = 10^{-4}$, hãy tìm giá trị của $N_\alpha$.
+	
+\addcontentsline{toc}{section}{Bài 2}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+Giả sử $\log n$ là logarit cơ số $e$.\\
+$\forall \alpha > 0,$ ta có: $\log n < n^\alpha$
+\begin{align*}
+&\Leftrightarrow n^{-\alpha} \log n < 1 \qquad \text{(nhân cả 2 vế với } n^{-\alpha} > 0 \text{ nên không thay đổi chiều BĐT)}\\
+&\Leftrightarrow n^{-\alpha} \log \big( n^{-\alpha} \big) > -\alpha \qquad \text{(nhân cả 2 vế với } -\alpha < 0 \text{ nên thay đổi chiều BĐT)}\\
+&\Leftrightarrow \log \big( n^{-\alpha} \big) \exp \big[ \log \big( n^{-\alpha} \big) \big] > -\alpha\\
+&\Leftrightarrow
+\left[ \begin{array}{l}
+\log \big( n^{-\alpha} \big) > W_{0}(-\alpha)\\
+\log \big( n^{-\alpha} \big) < W_{-1}(-\alpha)
+\end{array} \right.\\
+&\Leftrightarrow
+\left[ \begin{array}{l}
+\log n < \displaystyle - \frac{1}{\alpha} W_{0}(-\alpha)\\[6pt]
+\log n > \displaystyle - \frac{1}{\alpha} W_{-1}(-\alpha)
+\end{array} \right.\\
+&\Leftrightarrow 
+\left[ \begin{array}{l}
+n < \exp \Big[ \displaystyle - \frac{1}{\alpha} W_{0}(\alpha) \Big] \\[6pt]
+n > \exp \Big[ \displaystyle - \frac{1}{\alpha} W_{-1}(\alpha) \Big]
+\end{array} \right.
+\end{align*}
+
+Với $\alpha = 10^{-4}$, ta được:\\[6pt]
+$\left[ \begin{array}{l}
+n < \exp \Big[ \displaystyle - \frac{1}{10^{-4}} W_{0}\Big(10^{-4}\Big) \Big] \\[6pt]
+n > \exp \Big[ \displaystyle - \frac{1}{10^{-4}} W_{-1}\Big(10^{-4}\Big) \Big]
+\end{array} \right.
+\Leftrightarrow
+\left[ \begin{array}{l}
+n < 2,71855 \\
+n > 4,31133 \cftdot 10^{50669}
+\end{array} \right.$\\[6pt]
+Vậy ta có thể chọn một giá trị bất kì của $N_\alpha \in\Big[4,31133 \cftdot 10^{50669}; +\infty\Big).$
+
+\clearpage

@@ -1,0 +1,108 @@
+\section*{Bài 1.}
+
+Cho $a < b < c$ là 3 nghiệm của đa thức:
+$$P \big( x \big) = x^3 - 3x + 1$$
+Chứng minh rằng: $a^2 - c = b^2 - a = c^2 - b = 2$ (*)
+	
+\addcontentsline{toc}{section}{Bài 1}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+Từ $a^2 - c = b^2 - a = c^2 - b = 2 \Rightarrow$
+$ \begin{cases}
+    c = a^2 - 2\\
+    a = b^2 - 2\\
+    b = c^2 - 2
+\end{cases} $
+
+Do đó, để chứng minh (*), ta cần chứng minh 2 điều sau:
+\begin{enumerate}
+    \item $a^2 - 2$, $b^2 - 2$, $c^2 -2$ là 3 nghiệm của $P(x)$.
+    \item $b^2 < c^2 2 < a^2 2$ là 3 nghiệm của $P(x)$.
+\end{enumerate}
+
+Áp dụng định lý Viet cho $P(x)$ với 3 nghiệm là $a, b, c$ ta có:
+$$\begin{cases}
+    a + b + c = 0\\
+    ab + bc + ca = -3\\
+    abc = -1 
+\end{cases}$$
+
+\textbf{1.1. Chứng minh $a^2 - 2$, $b^2 - 2$, $c^2 -2$ là 3 nghiệm của $P(x)$.}
+
+Áp dụng định lý Viet đảo, ta cần chứng minh:
+$$\begin{cases}
+    a^2 - 2 + b^2 - 2 + c^2 - 2 = 0\\
+    (a^2 - 2)(b^2 - 2) + (b^2 -2)(c^2 - 2) + (a^2 -2)(c^2 - 2) = -3\\
+    (a^2 - 2)(b^2 - 2)(c^2 - 2) = -1
+\end{cases}$$
+
+\textbf{CM1. } $a^2 - 2 + b^2 - 2 + c^2 - 2 = 0$
+
+Ta có: 
+
+\begin{align*}
+    &a + b + c = 0 \\
+    \Leftrightarrow \text{ } &(a + b + c)^2 = 0\\
+    \Leftrightarrow \text{ } &a^2 + b^2 + c^2 + 2(ab + bc + ac) = 0\\
+    \Leftrightarrow \text{ } &a^2 + b^2 + c^2 + 2(-3) = 0\\
+    \Leftrightarrow \text{ } &a^2 + b^2 + c^2 -6 = 0\\
+    \Leftrightarrow \text{ } &a^2 - 2 + b^2 - 2 + c^2 - 2 = 0
+\end{align*}
+
+\textbf{CM2. } $(a^2 - 2)(b^2 - 2) + (b^2 -2)(c^2 - 2) + (a^2 -2)(c^2 - 2) = -3$
+
+Ta có:
+
+\begin{align*}
+    &(a^2 - 2)(b^2 - 2) + (b^2 -2)(c^2 - 2) + (a^2 -2)(c^2 - 2)\\
+    = &a^2(b^2-2) - 2(b^2 -2) + b^2(c^2-2) - 2(c^2-2) + c^2(a^2-2) - 2(a^2-2)\\
+    = &a^2(b^2-2) + b^2(c^2-2) + c^2(a^2-2) -2(b^2-2 + c^2-2 + a^2-2)\\
+    = &a^2b^2 -2a^2 + b^2c^2 - 2b^2 + a^2c^2 -2c^2\\
+    = &a^2b^2 + b^2c^2 + a^2c^2 -2(a^2 + b^2 + c^2)\\
+    = &a^2b^2 + b^2c^2 + a^2c^2 -2 \cdot 6\\
+    = &(ab)^2 + (bc)^2 + (ac)^2 -12\\
+    = &(ab + bc + ac)^2 - 2abc(a + b + c) - 12\\
+    = &(-3)^2 - 2 \cdot (-1) \cdot 0 -12\\
+    = &-3
+\end{align*}
+
+\textbf{CM3. }$(a^2 - 2)(b^2 - 2)(c^2 - 2) = -1$
+
+Ta có:
+
+\begin{align*}
+    &(a^2 - 2)(b^2 - 2)(c^2 - 2)\\
+    = &a^2b^2c^2 -2a^2b^2 - 2a^2c^2 + 4a^2 -2b^2c^2 + 4b^2 + 4c^2 - 8\\
+    = &(abc)^2 + 4(a^2 + b^2 + c^2) - 2((ab)^2 + (bc)^2 + (ac)^2) - 8\\
+    = &(abc)^2 + 4(a^2 + b^2 + c^2) - 2[(ab + bc + ac)^2 - 2abc(a + b + c)] - 8\\
+    = &(-1)^2 + 4 \cdot 6 - 2 \cdot [(-3)^2 - 2 \cdot (-1) \cdot 0] - 8\\
+    = &1 + 24 - 18 - 8\\
+    = &-1
+\end{align*}
+
+Do đó, ta đã chứng minh được $a^2 - 2$, $b^2 - 2$, $c^2 -2$ là 3 nghiệm của $P(x)$.
+
+\textbf{1.2. Chứng minh $b^2 - 2 < c^2 - 2 < a^2 - 2$ là 3 nghiệm của $P(x)$.}
+
+\begin{itemize}
+    \item Đầu tiên ta có $abc = -1$ $\Leftrightarrow$
+    $\begin{cases}
+        a, b, c \neq 0\\
+        a, b, c \text{ có 1 hoặc 3 số âm.}
+    \end{cases}$
+    \item Mà $a + b + c = 0$, do đó không thể xảy ra trường hợp cả 3 số đều âm, nên trong 3 số $a$, $b$, $c$ có 1 số âm.
+    \item Lại có $a < b < c$, $a$ nhỏ nhất trong 3 số nên $a$ là số âm.
+    \item Từ $a + b + c = 0$ $\Rightarrow$ $a = -(b + c)$ $\Rightarrow$ $a^2 = (b + c)^2$
+    
+    $\Rightarrow$ $a^2 = b^2 + 2bc + c^2 > b^2 + c^2$ (Vì $b, c > 0$ nên $2bc > 0$)
+    
+    $\Rightarrow$ $a^2 > b^2 + c^2 > c^2 > b^2$ (Vì $b < c$)
+    
+    $\Rightarrow$ $b^2 - 2 < c^2 - 2 < a^2 - 2$
+\end{itemize}
+Vậy ta chứng minh được $b^2 - 2 < c^2 - 2 < a^2 - 2$ là 3 nghiệm của $P(x)$.
+
+\clearpage

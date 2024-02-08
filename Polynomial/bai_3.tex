@@ -1,0 +1,58 @@
+\section*{Bài 3}
+
+Viết chương trình giải phương trình bậc 3.
+	
+\addcontentsline{toc}{section}{Bài 3}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+\textbf{Mã giả của thuật toán:}\\
+\begin{algorithm}[H]
+\setstretch{1.15}
+\renewcommand{\algorithmcfname}{Thuật toán}
+
+\caption{Tìm nghiệm thực của phương trình bậc 4: $ax^3 + bx^2 + cx + d = 0$}
+\SetKwInOut{Input}{Đầu vào}\SetKwInOut{Output}{Đầu ra}
+\SetAlgoNoEnd\SetAlgoNoLine%
+
+\Input{Các số thực $a, b, c, d$ $(a \neq 0)$.}
+\Output{Các số thực $x$ sao cho $x$ là nghiệm của phương trình $ax^3 + bx^2 + cx + d = 0$.}
+$\Delta \leftarrow b^2 - 3ac$\\
+$\displaystyle k \leftarrow \frac{9abc - 2b^3 - 27a^2d}{2\sqrt{|\Delta|^3}}$\\
+\uIf{$\Delta > 0$}{
+    \tcc{Phương trình có 3 nghiệm thực phân biệt}
+    \If{$|k| \leq 1$}{
+        $\displaystyle x_1 \leftarrow \frac{2\sqrt{\Delta}\cos{\displaystyle \left( \frac{ \arccos{(k)}}{3} \right)} - b}{3a}$\\[6pt]
+        $\displaystyle x_2 \leftarrow \frac{2\sqrt{\Delta}\cos{\displaystyle \left( \frac{ \arccos{(k)}}{3} - \frac{2\pi}{3} \right)} - b}{3a}$\\[6pt]
+        $\displaystyle x_3 \leftarrow \frac{2\sqrt{\Delta}\cos{\displaystyle \left( \frac{ \arccos{(k)}}{3} + \frac{2\pi}{3} \right)} - b}{3a}$\\
+        \Return $x_1, x_2, x_3$
+    }
+    \tcc{Phương trình có 1 nghiệm thực phân biệt}
+    \Else{
+        $\displaystyle x \leftarrow \frac{\sqrt{\Delta}|k|}{3ak} \left( \sqrt[3]{|k| + \sqrt{k^2 - 1}} + \sqrt[3]{|k| - \sqrt{k^2 - 1}} \right) - \frac{b}{3a}$\\
+        \Return $x$
+    }
+}
+
+\uElseIf{$\Delta = 0$}{
+    \If{$b^3 - 27a^2d = 0$}{
+        $\displaystyle x \leftarrow - \frac{b}{3a}$\\
+        \Return $x$
+    }
+    \Else{
+        $\displaystyle x \leftarrow \frac{-b + \sqrt[3]{b^3 - 27a^ad}}{3b}$\\
+        \Return $x$
+    }
+}
+
+\Else{
+    $\displaystyle x \leftarrow \frac{\sqrt{|\Delta|}}{3a} \left( \sqrt[3]{k + \sqrt{k^2 + 1}} + \sqrt[3]{k - \sqrt{k^2 + 1}} \right) - \frac{b}{3a}$\\
+    \Return $x$
+}
+\end{algorithm}
+
+\textbf{Hiện thực thuật toán trên Maple:}
+	
+\clearpage

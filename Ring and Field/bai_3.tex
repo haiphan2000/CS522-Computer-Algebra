@@ -1,0 +1,38 @@
+\section*{Bài 3.}
+
+Trong vành giao hoán có đơn vị $R$, phần tử $x \in R$ được gọi là lũy linh nếu tồn tại số tự nhiên $n > 0$ sao cho $x^n = 0$. Chứng minh rằng:
+\begin{enumerate}[label=\alph*.]
+    \item Nếu $x$ lũy linh thì $1 + x$ khả nghịch (1 là phần tử đơn vị của phép "$\cdot$" trong $R$).
+
+    \item Phần tử $u \in R$ khả nghịch $\Leftrightarrow \forall x$ lũy linh thì $u + x$ khả nghịch.
+\end{enumerate}
+	
+\addcontentsline{toc}{section}{Bài 3}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+\begin{enumerate}[label=\alph*.]
+    \item Vì $x$ lũy linh nên tồn tại số tự nhiên $n > 0$ sao cho $x^n = 0$.\\
+    Khi đó: $(-x)^n = 0$.\\
+    Ta có: $\displaystyle 1 = 1 - 0 = 1 - (-x)^n = (1 + x) \sum_{i=0}^{n-1} (-x)^i$.\\
+    Ta thấy $\exists u = \displaystyle \sum_{i=0}^{n-1} (-x)^i \in R$ mà $u \cdot (1 + x) = 1$.\\[3pt]
+    Khi đó, $1 + x$ khả nghịch.
+     
+    Vậy nếu $x$ lũy linh thì $1 + x$ khả nghịch (đpcm).
+
+    \item \textbf{Xét trường hợp 1:} Giả sử lúc ban đầu, phần tử $u \in R$ khả nghịch.\\
+    Ta có: $u + x = u \cdot (1 + u^{-1} x ).$\\
+    Vì $x$ lũy linh nên tồn tại số tự nhiên $n > 0$ sao cho $x^n = 0 \Leftrightarrow x^n \cdot (u^{-1})^n = 0 \Leftrightarrow (u^{-1}x)^n = 0$. Suy ra, $u^{-1}x$ lũy linh.\\
+    Áp dụng kết quả ở câu \textbf{a.} đã chứng minh ở trên, ta có: Vì $u^{-1}x$ lũy linh nên $1 + u^{-1}x$ khả nghịch.
+    Mà vì phần tử $u \in R$ cũng khả nghịch nên theo tính chất của phần tử khả nghịch thì $u \cdot (1 + u^{-1} x )$ khả nghịch hay $u + x$ khả nghịch.
+    
+    \textbf{Xét trường hợp 2:} Giả sử lúc ban đầu, $\forall x$ lũy linh thì $u + x$ khả nghịch.\\
+    Ta chọn $x = 0$ là một phần tử lũy linh (vì $x^n = 0^n = 0, \forall n > 0$).\\
+    Khi đó $u + 0$ khả nghịch hay $u$ khả nghịch.
+    
+    Từ trường hợp 1 và 2, ta kết luận: Phần tử $u \in R$ khả nghịch $\Leftrightarrow \forall x$ lũy linh thì $u + x$ khả nghịch (đpcm).
+\end{enumerate}
+	
+\clearpage

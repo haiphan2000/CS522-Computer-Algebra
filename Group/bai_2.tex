@@ -1,0 +1,20 @@
+\section*{Bài 2.}
+
+(Định lý Lagrange) Cho $G$ là một nhóm con hữu hạn và $H$ là một nhóm con của $G$. Chứng minh rằng khi đó:
+$$\big| G \big| = \big| H \big| \cftdot \big| G/H \big|$$
+Với $G/H$ là tập thương của $G$ trên $H$ theo quan hệ $\sim$ trong bài học.\\
+Kí hiệu: $\big| A \big|$ nghĩa là số phần tử của tập hợp A, card(A).
+	
+\addcontentsline{toc}{section}{Bài 2}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+Nếu $G = H$ thì điều cần chứng minh là hiển nhiên đúng.\\
+Giả sử $H = \{h_1, h_2,... h_n\}$ nhỏ hơn nhóm $G$ và $x \in G \setminus H$. Lúc này tất cả các phần tử của tập $Hx = \{h_1x, h_2x,... h_nx\}$ khác nhau và không trùng với các phần tử của $H$. Vì từ $h_ix = h_jx$ dẫn đến $h_i = h_j$, nhưng $h_ix = h_j$ dẫn đến $x = h_i^{-1}h_j \in H$ là không thể. Nếu như $H \cup Hx = G$ thì định lý được chứng minh.\\
+Nếu như $H \cup Hx$ nhỏ hơn $G$, thì có thể chọn $x' \in G \setminus (H \cup Hx)$ và thành lập nên tập $Hx' = \{h_1x', h_2x',... h_nx'\}$. Tương tự các phần tử của tập này cũng khác nhau và không trùng với các phần tử của tập $H \cup Hx$. Cứ tiếp tục như thế, nhận kết quả như sau $G = H \cup Hx \cup Hx' \cup ...$\\
+Từ đây có $G$ chia hết cho $n$ hay $\big| G \big| = \big| H \big| \cftdot \big| G/H \big|$.
+
+	
+\clearpage

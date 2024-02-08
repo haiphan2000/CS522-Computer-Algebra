@@ -1,0 +1,105 @@
+\section*{Bài 1.}
+
+\begin{enumerate}[label=(\alph*)]
+\item (Định lí Wilson) Chứng minh rằng:
+$$\forall p \text{ là số nguyên tố}, \big( p - 1 \big)! \equiv -1 \Mod{p}$$
+\item (Định lí Fermat nhỏ) Chứng minh rằng:$$\forall p \text{ là số nguyên tố}, a \text{ là số nguyên sao cho } \big( a, p \big) = 1.$$
+$$\text{Khi đó: } a^{p - 1} \equiv 1 \Mod{p}$$
+\end{enumerate}
+	
+\addcontentsline{toc}{section}{Bài 1}
+
+\centering
+\textbf{\underline{Bài làm:}}
+
+\justifying
+(a) \textbf{\underline{Chứng minh định lí Wilson}}
+
+\textbf{(1) Nếu $\big( p - 1 \big)! \equiv -1 \Mod{p}$ thì $p$ là số nguyên tố}
+
+Ta có: $\big( p - 1 \big)! \equiv -1 \Mod{p}$
+
+$\Rightarrow \big( p - 1 \big)! + 1 \equiv 0 \Mod{p}$ hay $\big( p - 1 \big)! + 1$ chia hết cho p.
+
+$\Rightarrow 1.2.3.4.5....\big( p - 1 \big) +1$ $\vdots$ $p$
+
+Vì khi đó $p$ sẽ nguyên tố cùng nhau với các số $1, 2, 3, 4, 5,...\big( p - 1 \big)$, nên không thể tồn tại ước $k$ nào khác ngoài 1 và chính nó, hay nói cách khác, $p$ là số nguyên tố.
+
+Vậy ta chứng minh được mệnh đề (1).
+\\[7pt]
+\textbf{(2) Nếu $p = 2$:} dễ thấy được $\big( 2 - 1 \big)! = 1 \equiv -1 \Mod{2}$ (Đúng)
+\\[7pt]
+\textbf{(3) Nếu $p$ là số nguyên tố $\big( p > 2 \big)$ thì $\big( p - 1 \big)! + 1$ chia hết cho $p$}
+
+Để chứng minh mệnh đề trên, trước tiên ta cần chứng minh: $\text{Cho } A = \left \{ 2, 3, 4,..., p-2 \right \}$. $\forall a \in A, \text{tồn tại duy nhất } m \in A \text{ sao cho } m.a \equiv -1 \Mod{p} \text{(*)}$
+
+\textbf{(3.1)} Xét dãy $a, 2a, 3a, 4a, ..., \big( p - 1 \big)a$, có thể thấy:
+\begin{itemize}
+    \item Các số khác nhau từng đôi một.
+    \item Không có hai số nào đồng dư theo module $p$.
+\end{itemize}
+
+\big(Giả sử $\exists$ $ma \equiv na \Mod{p}$ (với $n \in A$) 
+
+$\Rightarrow \big(m - n\big) a \equiv 0 \Mod{p}$
+
+$\Rightarrow \big(m - n\big)$ $\vdots$ $p$ (Vì $a \not \vdots \text{ } p$)
+
+Vì $m, n < p$ nên để $\big(m - n\big)$ $\vdots$ $p$ thì $m = n$ (Điều này không đúng với điều kiện $m, n \in A$).
+
+Do đó không tồn tại hai số nào trong dãy trên đồng dư theo module $p$\big).
+
+\textbf{(3.2)} Giả sử $\exists m$, $1 \leq m \leq p-1$ sao cho $ma \equiv 1 \Mod{p}$
+\begin{itemize}
+    \item Nếu $m = 1$ thì $a = 1$ (Sai)
+    \item Nếu $m = p - 1$ thì: $m \equiv p - 1 \equiv -1 \Mod{p}$
+    $\Rightarrow a \equiv -1 \Mod{p} \Rightarrow a = p - 1 \text{ (Sai)}$
+\end{itemize}
+$\Rightarrow 1 < m < p - 1$
+
+Ta chứng minh được mệnh đề (*).
+
+Chia tập $A$ thành các cặp $(a, m)$ sao cho $ma \equiv 1 \Mod{p}$
+
+Ta có: $2.3.4....(p-2) \equiv 1 \Mod{p}$
+
+$\Rightarrow (p-2)! \equiv 1 \Mod{p}$
+
+$\Rightarrow (p-2)!(p-1) \equiv (p-1).1 \Mod{p}$
+
+$\Rightarrow (p-1)! \equiv p-1 \equiv -1 \Mod{p}$ (đpcm)
+
+Như vậy ta đã chứng minh được định định lí Wilson.
+\\[11pt]
+(b) \textbf{\underline{Chứng minh định lí Fermat nhỏ}}
+
+Xét dãy số $a, 2a, 3a, 4a,..., (p-1)a$:
+\begin{itemize}
+    \item Vì $a$ $\not \vdots$ $p$ nên các số trong dãy trên cũng không chia hết cho p
+    \item Không tồn tại hai số nào đồng dư theo module $p$
+\end{itemize}
+
+Giả sử các số $a, 2a, 3a, 4a,...,(p-1)a$ chia cho $p$ được các số dư là $r_1, r_2, r_3,...,r_{p-1}$.
+
+Khi đó, $r_1, r_2, r_3,...,r_{p-1}$ khác nhau đôi một. (*)
+
+\big(Giả sử $\exists r_i = r_j$ $(1 \leq i \leq j \leq p-1)$
+
+Ta có $ia \equiv ij \Mod{p}$ $\Leftrightarrow$ $a(i - j) \equiv 0 \Mod{p}$
+
+Điều này không hợp lý vì $a$ $\not \vdots$ $p$, $i - j$ $\not \vdots$ $p$.
+
+Do đó ta chứng minh được (*)\big).
+
+Từ (*) suy ra các số dư lần lượt là $1, 2, 3, 4,...,p-1$
+
+Hay $r_1.r_2.r_3....r_{p-1} = (p-1)!$
+
+$\Rightarrow a.2a.3a.4a....(p-1)a \equiv (p-1)! \Mod{p}$
+
+$\Rightarrow a^{p-1}.(p-1)! \equiv (p-1)! \Mod{p}$
+
+$\Rightarrow a^{p-1} \equiv 1 \Mod{p}$ (đpcm)
+
+Như vậy ta đã chứng minh được định lí Fermat nhỏ.
+\clearpage
