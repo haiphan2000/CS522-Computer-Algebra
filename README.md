@@ -1,1 +1,1 @@
-# CS522-Computer-Algebra
+# CS522 Computer Algebra
